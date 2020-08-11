@@ -59,7 +59,7 @@ int main()
         }
 
     }
-    else if (a = b && a < 100000000 && b < 100000000)
+    else if (a == b && a < 100000000 && b < 100000000)
     {
         printf("Output: %d", a);
         average = a;
