@@ -20,17 +20,20 @@ int main()
             c[i] = a + i;
             printf("%d ", c[i]);
             average = average + c[i];
+            if (i == (b - a))
+            {
+                n = i + 1;
+                average = average / n;
+                printf("\nAverage = %f", average);
+                for (i = 0; i <= (b - a); i++)
+                {
+                    SD = SD + r_preSD(c[i]);
+                }
+                n = i - 1;
+                SD = sqrt(SD / n);
+                printf("\nSD = %f", SD);
+            }
         }
-        n = i;
-        average = average / n;
-        printf("\nAverage = %f", average);
-        for (i = 0; i <= (b - a); i++)
-        {
-            SD = SD + r_preSD(c[i]);
-        }
-        n = i - 1;
-        SD = sqrt(SD / n);
-        printf("\nSD = %f", SD);
     }
     else if (a > b)
     {
@@ -40,17 +43,21 @@ int main()
             c[i] = a - i;
             printf("%d ", c[i]);
             average = average + c[i];
+            if (i == (a - b)) 
+            {
+                n = i + 1;
+                average = average / n;
+                printf("\nAverage = %f", average);
+                for (i = 0; i <= (a - b); i++)
+                {
+                    SD = SD + r_preSD(c[i]);
+                }
+                n = i - 1;
+                SD = sqrt(SD / n);
+                printf("\nSD = %f", SD);
+            }
         }
-        n = i;
-        average = average / n;
-        printf("\nAverage = %f", average);
-        for (i = 0; i <= (a - b); i++)
-        {
-            SD = SD + r_preSD(c[i]);
-        }
-        n = i - 1;
-        SD = sqrt(SD / n);
-        printf("\nSD = %f", SD);
+
     }
     else if (a = b)
     {
@@ -60,6 +67,7 @@ int main()
         SD = 0;
         printf("\nSD = %f", SD);
     }
+    return 0;
 }
 
 float r_preSD(float p) {
