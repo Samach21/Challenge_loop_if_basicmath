@@ -12,7 +12,7 @@ int main()
 {
     printf("Input: ");
     scanf_s("%d%d", &a, &b);
-    if (a < b)
+    if (a < b && a < 100000000 && b < 100000000)
     {
         printf("Output: ");
         for (i = 0; i <= (b - a); i++)
@@ -35,7 +35,7 @@ int main()
             }
         }
     }
-    else if (a > b)
+    else if (a > b && a < 100000000 && b < 100000000)
     {
         printf("Output: ");
         for (i = 0; i <= (a - b); i++)
@@ -59,13 +59,17 @@ int main()
         }
 
     }
-    else if (a = b)
+    else if (a = b && a < 100000000 && b < 100000000)
     {
-        printf("Output: %d", &a);
+        printf("Output: %d", a);
         average = a;
         printf("\nAverage = %f", average);
         SD = 0;
         printf("\nSD = %f", SD);
+    }
+    else 
+    {
+        printf("Error");
     }
     return 0;
 }
