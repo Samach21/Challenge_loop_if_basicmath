@@ -24,14 +24,14 @@ int main()
             {
                 n = i + 1;
                 average = average / n;
-                printf("\nAverage = %f", average);
+                printf("\nAverage = %.1f", average);
                 for (i = 0; i <= (b - a); i++)
                 {
                     SD = SD + r_preSD(c[i]);
                 }
                 n = i - 1;
                 SD = sqrt(SD / n);
-                printf("\nSD = %f", SD);
+                printf("\nSD = %.2f", SD);
             }
         }
     }
@@ -47,14 +47,14 @@ int main()
             {
                 n = i + 1;
                 average = average / n;
-                printf("\nAverage = %f", average);
+                printf("\nAverage = %.1f", average);
                 for (i = 0; i <= (a - b); i++)
                 {
                     SD = SD + r_preSD(c[i]);
                 }
                 n = i - 1;
                 SD = sqrt(SD / n);
-                printf("\nSD = %f", SD);
+                printf("\nSD = %.2f", SD);
             }
         }
 
@@ -63,9 +63,9 @@ int main()
     {
         printf("Output: %d", a);
         average = a;
-        printf("\nAverage = %f", average);
+        printf("\nAverage = %.1f", average);
         SD = 0;
-        printf("\nSD = %f", SD);
+        printf("\nSD = %.2f", SD);
     }
     else 
     {
