@@ -1,20 +1,34 @@
 #include <stdio.h>
+#include<math.h>
 
 int main()
 {
-    int n[8] = { 5, 10, 15, 20, 25, 30, 35, 40 };
-
+    int a;
+    int b;
+    int c[100];
+    float average = 0, n, SD = 0, preSD;
     int i;
-    for (i = 0; i < 8; i++)
+    printf("Input: ");
+    scanf_s("%d%d", &a, &b);
+    if (a < b)
     {
-        printf("%d, ", n[i]);
+        printf("Output: ");
+        for (i = 0; i <= (b - a); i++)
+        {
+            c[i] = a + i;
+            printf("%d ", c[i]);
+            average = average + c[i];
+        }
+        n = i;
+        average = average / n;
+        printf("\nAverage = %f", average);
+        for (i = 0; i <= (b - a); i++)
+        {
+            preSD = c[i];
+            SD = SD + (preSD - average)*(preSD - average);
+        }
+        n = i - 1;
+        SD = sqrt(SD / n);
+        printf("\nSD = %f", SD);
     }
-
-    printf("\n");
-
-    for (i = 7; i >= 0; i--)
-    {
-        printf("%d, ", n[i]);
-    }
-    return 0;
 }
